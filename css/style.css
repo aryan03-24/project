@@ -61,7 +61,7 @@ header {
         linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 65%),
         url("../assets/35379970-9948-4B18-B816-8E2636C8D0EC.png");
     background-size: cover;
-    background-position: center 15%;
+    background-position: center 10%;
     background-repeat: no-repeat;
 }
 
@@ -98,7 +98,7 @@ header > a:hover {
 
 header h2 {
     position: absolute;
-    bottom: 28%;
+    bottom: 24%;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -113,7 +113,7 @@ header h2 {
 
 header h3 {
     position: absolute;
-    bottom: 22%;
+    bottom: 18%;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -128,11 +128,11 @@ header h3 {
 
 header h1 {
     position: absolute;
-    left: 105%;
+    left: 95%;
     top: 50%;
     transform: translate(-75%, -50%);
-    width: min(94vw, 900px);
-    height: 400px;
+    width: min(94vw, 1000px);
+    height: 500px;
     margin: 0;
     color: transparent !important;
     overflow: hidden;
