@@ -1,0 +1,419 @@
+/* crimson-text-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/crimson-text-v19-latin-regular.woff2') format('woff2');
+}
+/* crimson-text-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/crimson-text-v19-latin-700.woff2') format('woff2');
+}
+
+html,body{
+    font-family: 'Crimson Text', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --ink: #0f172a;
+    --blue: #2563eb;
+    --sky: #38bdf8;
+    --teal: #14b8a6;
+    --white: #ffffff;
+    --paper: #f8fafc;
+    --soft: #eef6ff;
+    --muted: #64748b;
+    --line: rgba(15, 23, 42, 0.14);
+    --shadow: 0 28px 90px rgba(15, 23, 42, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 24%, rgba(37, 99, 235, 0.12), transparent 30%),
+        linear-gradient(180deg, var(--paper) 0%, var(--soft) 42%, var(--white) 100%);
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 65%),
+        url("../assets/35379970-9948-4B18-B816-8E2636C8D0EC.png");
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+}
+
+header::after {
+    display: none;
+}
+
+header > a {
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0.4rem 1.3rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+header > a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+
+header h2 {
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    z-index: 5;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h3 {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    z-index: 5;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translate(-75%, -50%);
+    width: min(94vw, 900px);
+    height: 400px;
+    margin: 0;
+    color: transparent !important;
+    overflow: hidden;
+    z-index: 6;
+    filter:
+        brightness(0)
+        drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+header h1::before {
+    display: none;
+}
+
+header h1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/signature.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    clip-path: inset(0 100% 0 0);
+    animation: writeSignature 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+}
+
+#hero-links {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex !important;
+    gap: 1rem;
+}
+
+.hero-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.hero-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
+.container {
+    max-width: 1180px;
+    padding-top: 4.4rem;
+    padding-bottom: 2rem;
+}
+
+.container::before {
+    content: "My Projects";
+    display: block;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    font-size: clamp(2.8rem, 6vw, 5.6rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    color: var(--ink);
+}
+
+.row {
+    row-gap: 2rem;
+}
+
+@media (min-width: 992px) {
+    .container .col-sm-6 {
+        width: 33.333333%;
+    }
+}
+
+.card {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 55px rgba(15, 23, 42, 0.09);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    animation: fadeUp 0.85s ease both;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.14), transparent 38%),
+        linear-gradient(315deg, rgba(20, 184, 166, 0.13), transparent 42%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: var(--shadow);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(8%) saturate(0.94) contrast(1.04);
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.06);
+    filter: grayscale(0%) saturate(1.08) contrast(1.08);
+}
+
+.card-body {
+    position: relative;
+    z-index: 2;
+    padding: 1.75rem;
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+.card-title::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin-top: 0.72rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), var(--teal));
+    transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+    width: 82px;
+}
+
+.card-text {
+    min-height: 112px;
+    margin-bottom: 1.25rem;
+    color: var(--muted);
+    font-size: 1.16rem;
+    line-height: 1.45;
+}
+
+.btn-outline-secondary {
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 0.68rem 1.25rem;
+    color: var(--ink);
+    background: transparent;
+    font-size: 1.05rem;
+    font-weight: 700;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.btn-outline-secondary:hover {
+    transform: translateY(-3px);
+    background: var(--ink);
+    color: var(--white);
+    border-color: var(--ink);
+}
+
+footer {
+    margin-top: 3.5rem;
+    padding: 2.75rem 1rem 3.2rem;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.22), transparent 28%),
+        radial-gradient(circle at 80% 60%, rgba(20, 184, 166, 0.18), transparent 30%),
+        linear-gradient(135deg, #0d1321, #111827);
+    color: var(--white);
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+}
+
+@keyframes writeSignature {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0% 0 0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background:
+            linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 65%),
+            url("../assets/35379970-9948-4B18-B816-8E2636C8D0EC.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    header h2 {
+        bottom: 24%;
+        font-size: 1rem;
+    }
+
+    header h3 {
+        bottom: 20%;
+        font-size: 0.85rem;
+    }
+
+    header > a {
+        bottom: 12%;
+        font-size: 0.95rem;
+    }
+
+    #hero-links {
+        bottom: 4%;
+    }
+
+    header h1 {
+        left: 80%;
+        top: 45%;
+        width: 80vw;
+        height: 200px;
+    }
+
+    .container {
+        padding-top: 3.5rem;
+    }
+
+    .card-img-top {
+        height: 250px;
+    }
+
+    .card-text {
+        min-height: auto;
+    }
+}
