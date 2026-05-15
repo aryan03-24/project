@@ -61,7 +61,7 @@ header {
         linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 65%),
         url("../assets/35379970-9948-4B18-B816-8E2636C8D0EC.png");
     background-size: cover;
-    background-position: center 10%;
+    background-position: center 5%;
     background-repeat: no-repeat;
 }
 
@@ -380,12 +380,12 @@ footer p {
     }
 
     header h2 {
-        bottom: 24%;
+        bottom: 20%;
         font-size: 1rem;
     }
 
     header h3 {
-        bottom: 20%;
+        bottom: 15%;
         font-size: 0.85rem;
     }
 
